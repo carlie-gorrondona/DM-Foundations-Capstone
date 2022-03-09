@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Sage: Appointments</title>
+</head>
+<body>
+  <nav class="bg-green-500 navbar navbar-expand-lg navbar-dark" style="background-color: rgb(47, 104, 9); font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-1" href="home.html">Sage</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active fs-5" style="padding: 10px 20px 0 20px; border-bottom: 3px solid white" aria-current="page" href="appointments.html">Appointments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fs-5" style="padding: 10px 20px 0 20px;" aria-current="page" href="todolists.html">To-Do Lists</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fs-5" style="padding: 10px 20px 0 20px;" aria-current="page" href="journal.html">Journal</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container-fluid" class="bg-image"
+  style="
+  background-image: url('https://images.unsplash.com/photo-1606841634219-d7dbdd97b1ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+  height: 100vh;">
+
+    <div class="journalheading" style="padding: 30px 0 10px 0">
+      <button type="button" class="btn btn-success border border-dark" data-bs-toggle="modal" data-bs-target="#newappointmentmodal">
+        New Appointment
+      </button>
+    </div>
+  
+    <table class="table table-hover table-light table-striped border border-dark">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col">Title</th>
+          <th scope="col">Location</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody id="tablebody">
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal" id="newappointmentmodal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">New Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="appointmenttitleinput" class="form-label" id="appointmenttitle">Appointment Title:</label>
+            <input type="text" class="form-control" id="appointmenttitleinput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="appointmentdateinput" class="form-label" id="appointmentdate">Date:</label>
+            <input type="date" class="form-control" id="appointmentdateinput">
+          </div>
+          <div class="mb-3">
+            <label for="appointmenttimeinput" class="form-label" id="appointmenttime">Time:</label>
+            <input type="text" class="form-control" id="appointmenttimeinput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="appointmentlocationinput" class="form-label" id="appointmentlocation">Location:</label>
+            <input type="text" class="form-control" id="appointmentlocationinput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="appointmentnotesinput" class="form-label" id="appointmentnotes">Notes:</label>
+            <textarea class="form-control" id="appointmentnotesinput"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-tertiary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveappointmentbutton">Save Appointment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" id="updateappointmentmodal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">New Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="appointmenttitleinput" class="form-label" id="appointmenttitle">Appointment Title:</label>
+            <input type="text" class="form-control" id="appointmenttitleinput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="appointmentdateinput" class="form-label" id="appointmentdate">Date:</label>
+            <input type="date" class="form-control" id="appointmentdateinput">
+          </div>
+          <div class="mb-3">
+            <label for="appointmenttimeinput" class="form-label" id="appointmenttime">Time:</label>
+            <input class="form-control" id="appointmenttimeinput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="appointmentlocationinput" class="form-label" id="appointmentlocation">Location:</label>
+            <input type="text" class="form-control" id="appointmentlocationinput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="appointmentnotesinput" class="form-label" id="appointmentnotes">Notes:</label>
+            <textarea class="form-control" id="appointmentnotesinput"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-tertiary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="updateappointmentbutton">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--View Appointment Modal-->
+  <div class="modal" id="viewappointmentmodal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">View Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="appointmenttitleinput" class="form-label" id="apptitle">Title:</label>
+            <input type="text" class="form-control" id="appointmenttitleinput" disabled>
+          </div>
+          <div class="mb-3">
+            <label for="appointmentdateinput" class="form-label" id="appdate">Date:</label>
+            <input type="date" class="form-control" id="appointmentdateinput" placeholder="Entry 1" disabled>
+          </div>
+          <div class="mb-3">
+            <label for="appointmenttimeinput" class="form-label" id="apptime">Time:</label>
+            <textarea class="form-control" id="appointmenttimeinput" disabled></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="appointmentlocationinput" class="form-label" id="applocation">Location:</label>
+            <textarea class="form-control" id="appointmentlocationinput" disabled></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="appointmentnotesinput" class="form-label" id="appnotes">Notes:</label>
+            <textarea class="form-control" id="appointmentnotesinput" disabled></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-tertiary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="appointmentsavedtoast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <!-- <img src="..." class="rounded me-2" alt="..."> -->
+        <strong class="me-auto">Appointment Saved</strong> 
+        <small>Just Now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="toast-body">
+        Appointment Saved <!--Change this to the appointment name-->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="appointments.js"></script>
+</body>
+</html>

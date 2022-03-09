@@ -1,0 +1,26 @@
+[
+    {
+    "id": 1,
+    "date": "2022-03-01",
+    "title": "First Entry",
+    "body": "Super generic first journal entry about how this tool is going to change my life."
+    },
+    {
+    "id": 2,
+    "date": "2022-03-01",
+    "title": "Second Entry",
+    "body": "Just started my Capstone project for Devmountain."
+    },
+    {
+    "id": 3,
+    "date": "2022-03-07",
+    "title": "Another Generic Journal Entry",
+    "body": "Another example of my journal feature where you can add an entry, edit an entry, and delete an entry."
+    },
+    {
+    "id": 4,
+    "date": "2022-03-08",
+    "title": "I Finished My Capstone!!!",
+    "body": "Finally!! Now I just have to present it."
+    }
+]

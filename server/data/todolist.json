@@ -1,0 +1,26 @@
+[
+    {
+    "id": 1,
+    "date": "2022-03-01",
+    "title": "First To-Do List",
+    "listItems": ["Go to the store", "Cook dinner"]
+    },
+    {
+    "id": 2,
+    "date": "2022-03-05",
+    "title": "Second To-Do List",
+    "listItems": ["Work on Capstone project", "Try not to cry", "Cry a lot"]
+    },
+    {
+    "id": 3,
+    "date": "2022-03-08",
+    "title": "Capstone - Remaining Features",
+    "listItems": ["Get Edit To-Do List functionality on To-Do Lists page", "Get Delete To-Do List functionality on To-Do Lists page", "Get Today's To-Do List(s) functioning on Home page", "Finish styling"]
+    },
+    {
+    "id": 4,
+    "date": "2022-03-08",
+    "title": "Errands",
+    "listItems": ["Grocery shopping", "Organize desk", "Clean house", "Cook din-din"]
+    }
+]

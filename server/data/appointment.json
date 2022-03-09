@@ -1,0 +1,34 @@
+[
+    {
+    "id": 1,
+    "title": "Doc Appointment",
+    "date": "2022-03-01",
+    "time": "11:00 AM",
+    "location": "Doc's Address",
+    "notes": "NA"
+    },
+    {
+    "id": 2,
+    "title": "Lunch with Friends",
+    "date": "2022-03-08",
+    "time": "12:00 PM",
+    "location": "Stirr Restaurant",
+    "notes": "Don't bring up Jeff"
+    },
+    {
+    "id": 3,
+    "title": "Meeting with Wedding Planner",
+    "date": "2022-03-08",
+    "time": "1:00 PM",
+    "location": "Wedding Planner's Office: 1000 Fake Address Dr., Dallas, TX 00000",
+    "notes": "Bring any theme/decor ideas about the wedding."
+    },
+    {
+    "id": 4,
+    "title": "PT Appointment",
+    "date": "2022-03-08",
+    "time": "4:00 PM",
+    "location": "Gym",
+    "notes": "NA"
+    }
+]
